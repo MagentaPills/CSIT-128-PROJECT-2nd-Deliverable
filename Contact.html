@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us || VitalCorp</title>
+  <link rel="stylesheet" href="http://localhost:3333/?css=style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="Home">Home</a>
+      <a href="About">About</a>
+      <a href="Services">Services</a>
+      <a href="profile">My Profile</a>
+    </nav>
+    </header>
+
+    <div class="contact-container">
+      <h1>Connect With Us</h1>
+      <p>We would love to respond to your queries and help you succeed. feel
+      free to get in touch with us.</p>
+      <div class="contact-box">
+        <div class="contact-left">
+          <h3>Send Your Request</h3>
+          <form action="Home" method="get">
+            <div class="input-row">
+              <div class="input-group">
+                <label>Name</label>
+                <input type="text" pattern="^[A-Za-z]+$" required>
+              </div>
+              <div class="input-group">
+                <label>Phone Number</label>
+                <input type="text" value="(+971)05" pattern="\(\+971\)05\d{8}" required>
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label>Email</label>
+                <input type="email" required>
+              </div>
+            </div>
+
+            <label>Message</label>
+            <textarea rows="5" placeholder="Your Message..." required></textarea>
+
+            <button type="submit">SEND</button>
+          </form>
+        </div>
+        <div class="contact-right">
+          <h3>Reach Us</h3>
+          <table>
+            <tr>
+              <td>Email</td>
+              <td>vitalcorp@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>+971 123 123 214</td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td>#212, Academic City, The Myriad, Dubai</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    </body>
+    </html>

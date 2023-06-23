@@ -1,0 +1,60 @@
+{
+    "author": "Amine Qabil",
+    "servicesList": [
+        {
+            "service": "Annual Physicals",
+            "id": 1,
+            "doctor": "Dr. John Egbert"
+        },
+        {
+            "service": "Blood Testings",
+            "id": 2,
+            "doctor": "Dr. Dave Strider"
+        },
+        {
+            "service": "Vaccinations",
+            "id": 3,
+            "doctor": "Dr. Roxy Lalond"
+        },
+        {
+            "service": "Dentistry",
+            "id": 4,
+            "doctor": "Dr. Jade Harley"
+        },
+        {
+            "service": "Dermatology",
+            "id": 5,
+            "doctor": "Dr. Karkat Vantas"
+        },
+        {
+            "service": "Gastroenterology",
+            "id": 6,
+            "doctor": "Dr. Vriska Serket"
+        },
+        {
+            "service": "Neurology",
+            "id": 7,
+            "doctor": "Dr. John Egbert"
+        },
+        {
+            "service": "Oncology",
+            "id": 8,
+            "doctor": "Dr. Tavros Nitram"
+        },
+        {
+            "service": "Ophthalmology",
+            "id": 9,
+            "doctor": "Dr. Dave Strider"
+        },
+        {
+            "service": "Orthopedics",
+            "id": 10,
+            "doctor": "Dr. Terezi Pyrope"
+        },
+        {
+            "service": "Urology",
+            "id": 11,
+            "doctor": "Dr. John Egbert"
+        }
+    ]
+  }

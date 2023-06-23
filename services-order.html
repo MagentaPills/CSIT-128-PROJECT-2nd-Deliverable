@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile || VitalCorp</title>
+  <link rel="stylesheet" href="http://localhost:3333/?css=style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="Home">Home</a>
+      <a href="About">About</a>
+      <a href="Services">Services</a>
+      <a href="profile">My Profile</a>
+    </nav>
+    </header>
+      <script src="script.js"></script>
+      <div class="container-form">
+        <form action="">
+          <h2 class="form-heading">Book an Appointment</h2>
+          <div class="form-filed">
+            <p>Select your product:<p>
+            <select name="drugs" required>
+                <option value="Paracetamol">Paracetamol</option>
+                <option value="Hydrocodone">Hydrocodone</option>
+                <option value="Hydrochlorothiazide">Hydrochlorothiazide</option>
+                <option value="Abilify">Abilify</option>
+                <option value="Ibuprofen">Ibuprofen</option>
+                <option value="Atorvastatin">Atorvastatin</option>
+                <option value="Tramadol">Tramadol</option>
+                <option value="Amlodipine">Amlodipine</option>
+            </select>
+          </div>
+          <div class="form-filed">
+            <p>Quantity:</p>
+            <input type="text" name="productQuantity" size="3" required pattern="[0-9]+"/>
+          </div>
+             <input type="submit" value="Submit" class="service-form-btn">
+         </form>
+      </div>
+  </body>
+</html>

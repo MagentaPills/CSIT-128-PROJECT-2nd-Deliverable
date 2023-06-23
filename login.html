@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login || VitalCorp</title>
+    <link rel="stylesheet" href="http://localhost:3333/?css=style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+  
+    <div class="container">
+      <div class="content">
+      <h2 class="logo"><i class='bx bx-plus-medical' ></i>VitalCorp</h2>
+      <div class="text-sci">
+        <h2>Welcome Back!<br><span>We missed you</span></h2>
+        <p>Close to Your Heart.
+          Compassion. Innovation. Trust. Compassionate care.</p>
+        <div class="social-icons">
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-instagram' ></i></a>
+          <a href="#"><i class='bx bxl-twitter' ></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      </div>
+      </div>
+      <div class="logreg-box">
+          <div class="form-box login">
+              <form action="login" method="POST">
+                  <h2>Sign in</h2>
+                  <p id="demo_error_message" class="errorMessage"></p>
+                  <div class="input-box">
+                      <span class="icon"><i class='bx bxs-envelope'></i></span>
+                      <input type="email" id="email" name="email" required>
+                      <label for="email">Email</label>
+                  </div>
+
+                  <div class="input-box">
+                      <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                      <input type="password" id="password" name="password" pattern=".{8,}" required>
+                      <label for="password">Password</label>
+                  </div>
+
+                  <div class="remember-forgot">
+                      <label><input type="checkbox">Remember me</label>
+                      <a href="forgot">Forgot password?</a>
+                  </div>
+
+                  <button type="submit" class="btn">Sign In</button>
+
+                  <div class="login-register">
+                      <p>Don't Have an account? <a href="signup.html" class="register-link">Sign up</a> </p>
+                  </div>
+
+
+              </form>
+          </div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+  </body>
+</html>
