@@ -39,6 +39,20 @@ http.createServer(function (req, res) {
             myModule.login(res);
         }
     } 
+    else if (req.url == "/signup") {
+        myModule.signup(res);
+        if (req.method == "POST") {
+            var body = '';
+            req.on('data', chunk => {
+                body += chunk.toString();
+            });
+            req.on('end', () => {
+                var formData = querystring.parse(body);
+                myModule.handleSignup(res, formData)
+            });
+        }
+
+     }
     else if (req.url == "/logout") {
         s = mySess.getMySession();
         if (s !== undefined) {
@@ -96,10 +110,68 @@ http.createServer(function (req, res) {
             myModule.login(res);
         }
     }
-    else if (req.url == "/servicesForm") {
+    else if (req.url == "/my-services" || req.url == "/my-services?" ) { 
         s = mySess.getMySession();
-        myModule.getEmployee(res, s, myModule.navigateToServicesForm);
-
+        if (s !== undefined) {
+            if (s.email != "" && s.email !== undefined) {
+                myModule.getServices(res, s, myModule.navigateToMyServices);
+            }
+        }
+    } else if (req.url == "/servicesForm") {  
+        s = mySess.getMySession();
+        if (s !== undefined) {
+            if (s.email != "" && s.email !== undefined) {
+                myModule.navigateToServicesForm(res, s);
+            }
+        }
+    } else if (req.url.indexOf("/add_service_record") >= 0) {        
+        s = mySess.getMySession();
+        if (s !== undefined) {
+            if (s.email != "" && s.email !== undefined) {
+                var q = url.parse(req.url, true).query;
+                myModule.addBooking(res, s, q.serviceDesc, q.serviceDate, q.serviceTime, myModule.navigateToServicesForm);
+            }
+        }
+    }
+    else if (req.url == "/servicesOrder") {  
+        s = mySess.getMySession();
+        if (s !== undefined) {
+            if (s.email != "" && s.email !== undefined) {
+                myModule.navigateToProductsForm(res, s);
+            }
+        }
+    } else if (req.url.indexOf("/add_product_record") >= 0) {        
+        s = mySess.getMySession();
+        if (s !== undefined) {
+            if (s.email != "" && s.email !== undefined) {
+                var q = url.parse(req.url, true).query;
+                myModule.addProduct(res, s, q.productDesc, q.productQuantity, myModule.navigateToProductsForm);
+            }
+        }
+    }
+    else if (req.url == "/my-products" || req.url == "/my-products?" ) { 
+        s = mySess.getMySession();
+        if (s !== undefined) {
+            if (s.email != "" && s.email !== undefined) {
+                myModule.getProducts(res, s, myModule.navigateToMyProducts);
+            }
+        }
+    }
+    else if (req.url == "/contact") {  
+        s = mySess.getMySession();
+        if (s !== undefined) {
+            if (s.email != "" && s.email !== undefined) {
+                myModule.navigateToContact(res, s);
+            }
+        }
+    } else if (req.url.indexOf("/add_contact_record") >= 0) {        
+        s = mySess.getMySession();
+        if (s !== undefined) {
+            if (s.email != "" && s.email !== undefined) {
+                var q = url.parse(req.url, true).query;
+                myModule.addMessage(res, s, q.messageName, q.messagePhone, q.messageEmail, q.messageText, myModule.navigateToContact);
+            }
+        }
     }
     else {
         // Login page.

@@ -10,7 +10,17 @@
   </head>
 
   <body>
-    
+    <header class="header">
+      <nav class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Services.html">Services</a>
+        <a href="profile.html">My Profile</a>
+      </nav>
+    </header>
+
+
+
     <div class="container">
       <div class="content">
       <h2 class="logo"><i class='bx bx-plus-medical' ></i>VitalCorp</h2>
@@ -28,24 +38,24 @@
       </div>
       <div class="logreg-box">
         <div class="form-box register">
-          <form action="signup">
+          <form action="/process_registration" method="post">
             <h2>Sign Up</h2>
-            <p id="demo_error_message" class="errorMessage"></p>
+
             <div class="input-box">
               <span class="icon"><i class='bx bx-user'></i></span>
-              <input type="text" name="name" id="name" required>
+              <input type="text" required>
               <label>Name</label>
             </div>
 
             <div class="input-box">
               <span class="icon"><i class='bx bxs-envelope'></i></span>
-              <input type="email" name="email" id="email" required>
+              <input type="email" required>
               <label>Email</label>
             </div>
 
             <div class="input-box">
               <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-              <input type="password" name="password" id="password" required>
+              <input type="password" required>
               <label>Password</label>
             </div>
 

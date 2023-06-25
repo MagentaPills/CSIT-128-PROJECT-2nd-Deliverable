@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Profile || VitalCorp</title>
-  <link rel="stylesheet" href="http://localhost:3333/?css=style.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile || VitalCorp</title>
+    <link rel="stylesheet" href="http://localhost:3333/?css=style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <a href="Home">Home</a>
-      <a href="About">About</a>
-      <a href="Services">Services</a>
-      <a href="profile">My Profile</a>
-    </nav>
+    <header class="header">
+        <nav class="navbar">
+            <a href="Home">Home</a>
+            <a href="About">About</a>
+            <a href="Services">Services</a>
+            <a href="profile">My Profile</a>
+        </nav>
     </header>
-      <script src="script.js"></script>
-      <div class="container-form">
-        <form action="">
-          <h2 class="form-heading">Book an Appointment</h2>
-          <div class="form-filed">
-            <p>Choose Your Service:</p>
-            <select name="cars" id="cars">
-                <option value="Annual Physicals">Annual Physicals</option>
-                <option value="Blood Testings">Blood Testings</option>
-                <option value="Vaccinations">Vaccinations</option>
-                <option value="Dentistry">Dentistry</option>
-                <option value="Dermatology">Dermatology</option>
-                <option value="Gastroenterology">Gastroenterology</option>
-                <option value="Neurology">Neurology</option>
-                <option value="Oncology">Oncology</option>
-                <option value="Ophthalmology">Ophthalmology</option>
-                <option value="Orthopedics">Orthopedics</option>
-                <option value="Urology">Urology</option>
-            </select>
-          </div>
-          <div class="form-filed">
-            <p>Date:</p>
-            <input type="date" name="setTodaysDate" required>
-          </div>
-          <div class="form-filed">
-            <p>Time:</p>
-            <input type="time" required>
-          </div>
-             <input type="submit" value="Submit" class="service-form-btn">
-         </form>
-      </div>
-  </body>
+    <script type="text/javascript" src="http://localhost:3333/?js=script.js"></script>
+    <div class="container-form">
+       
+        <form action="add_service_record" method="get">
+            <p id="record_added" class="record"></p>
+            <p id="demo_booking_message"></p>
+            <h2 class="form-heading">Book an Appointment</h2>
+            <div class="form-filed">
+                <p>Choose Your Service:</p>
+                <select id="demo_services" name="serviceDesc" required>
+                    <option value="Annual Physicals">Annual Physicals</option>
+                    <option value="Blood Testings">Blood Testings</option>
+                    <option value="Vaccinations">Vaccinations</option>
+                    <option value="Dentistry">Dentistry</option>
+                    <option value="Dermatology">Dermatology</option>
+                    <option value="Gastroenterology">Gastroenterology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Oncology">Oncology</option>
+                    <option value="Ophthalmology">Ophthalmology</option>
+                    <option value="Orthopedics">Orthopedics</option>
+                    <option value="Urology">Urology</option>
+                </select>
+            </div>
+            <div class="form-filed">
+                <p>Date:</p>
+                <input type="date" name="serviceDate" required>
+            </div>
+            <div class="form-filed">
+                <p>Time:</p>
+                <input type="time" name="serviceTime" required>
+            </div>
+            <input type="submit" value="Submit" class="service-form-btn">
+        </form>
+    </div>
+</body>
 </html>

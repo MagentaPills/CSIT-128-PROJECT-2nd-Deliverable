@@ -11,7 +11,7 @@ con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
     // Create employee table.
-    var sql_table = "CREATE TABLE customer (cus_id INT PRIMARY KEY, " +
+    var sql_table = "CREATE TABLE customer (cus_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, " +
     "cus_name VARCHAR(50)," +
     "cus_email  VARCHAR(255)," +
     "cus_password VARCHAR(50))";

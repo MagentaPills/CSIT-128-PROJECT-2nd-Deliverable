@@ -5,7 +5,7 @@ function getServicesAJAX() {
                     processResult(xhttp);
                 }
             }
-            xhttp.open("GET", "SServices.json", true);   // async: true (asynchronous) or false (synchronous)
+            xhttp.open("GET", "./json/SServices.json", true);   // async: true (asynchronous) or false (synchronous)
             xhttp.send();
     }
 
