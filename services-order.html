@@ -19,27 +19,28 @@
     </header>
       <script src="script.js"></script>
       <div class="container-form">
-        <form action="">
-          <h2 class="form-heading">Book an Appointment</h2>
-          <div class="form-filed">
-            <p>Select your product:<p>
-            <select name="drugs" required>
-                <option value="Paracetamol">Paracetamol</option>
-                <option value="Hydrocodone">Hydrocodone</option>
-                <option value="Hydrochlorothiazide">Hydrochlorothiazide</option>
-                <option value="Abilify">Abilify</option>
-                <option value="Ibuprofen">Ibuprofen</option>
-                <option value="Atorvastatin">Atorvastatin</option>
-                <option value="Tramadol">Tramadol</option>
-                <option value="Amlodipine">Amlodipine</option>
-            </select>
-          </div>
-          <div class="form-filed">
-            <p>Quantity:</p>
-            <input type="text" name="productQuantity" size="3" required pattern="[0-9]+"/>
-          </div>
-             <input type="submit" value="Submit" class="service-form-btn">
-         </form>
+          <form action="add_product_record" method="get">
+              <p id="record_added" class="record"></p>
+              <h2 class="form-heading">Purchase A Product</h2>
+              <div class="form-filed">
+                  <p>Select your product:<p>
+                      <select name="productDesc" required>
+                          <option value="Paracetamol">Paracetamol</option>
+                          <option value="Hydrocodone">Hydrocodone</option>
+                          <option value="Hydrochlorothiazide">Hydrochlorothiazide</option>
+                          <option value="Abilify">Abilify</option>
+                          <option value="Ibuprofen">Ibuprofen</option>
+                          <option value="Atorvastatin">Atorvastatin</option>
+                          <option value="Tramadol">Tramadol</option>
+                          <option value="Amlodipine">Amlodipine</option>
+                      </select>
+              </div>
+              <div class="form-filed">
+                  <p>Quantity:</p>
+                  <input type="text" name="productQuantity" size="3" required pattern="[0-9]+" />
+              </div>
+              <input type="submit" value="Submit" class="service-form-btn">
+          </form>
       </div>
   </body>
 </html>

@@ -23,33 +23,34 @@
       <p>We would love to respond to your queries and help you succeed. feel
       free to get in touch with us.</p>
       <div class="contact-box">
-        <div class="contact-left">
-          <h3>Send Your Request</h3>
-          <form action="Home" method="get">
-            <div class="input-row">
-              <div class="input-group">
-                <label>Name</label>
-                <input type="text" pattern="^[A-Za-z]+$" required>
-              </div>
-              <div class="input-group">
-                <label>Phone Number</label>
-                <input type="text" value="(+971)05" pattern="\(\+971\)05\d{8}" required>
-              </div>
-            </div>
+          <div class="contact-left">
+              <p id="record_added" class="record"></p>
+              <h3>Send Your Request</h3>
+              <form action="add_contact_record" method="get">
+                  <div class="input-row">
+                      <div class="input-group">
+                          <label>Name</label>
+                          <input type="text" name="messageName" pattern="^[A-Za-z]+$" required>
+                      </div>
+                      <div class="input-group">
+                          <label>Phone Number</label>
+                          <input type="text" name="messagePhone" value="05" pattern="05\d{8}" required>
+                      </div>
+                  </div>
 
-            <div class="input-row">
-              <div class="input-group">
-                <label>Email</label>
-                <input type="email" required>
-              </div>
-            </div>
+                  <div class="input-row">
+                      <div class="input-group">
+                          <label>Email</label>
+                          <input type="email" name="messageEmail" required>
+                      </div>
+                  </div>
 
-            <label>Message</label>
-            <textarea rows="5" placeholder="Your Message..." required></textarea>
+                  <label>Message</label>
+                  <textarea rows="5" name="messageText" placeholder="Your Message..." required></textarea>
 
-            <button type="submit">SEND</button>
-          </form>
-        </div>
+                  <button type="submit">SEND</button>
+              </form>
+          </div>
         <div class="contact-right">
           <h3>Reach Us</h3>
           <table>

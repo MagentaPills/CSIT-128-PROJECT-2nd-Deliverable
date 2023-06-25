@@ -1,9 +1,14 @@
 var http = require('http');
 var fs = require('fs');
 http.createServer(function (req, res) {
-    fs.readFile('login.html', function (err, data) {
+    fs.readFile('services-form.html', function (err, data) {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.write(data);
-        
+        let readData = fs.readFileSync('./json/SServices.json');
+        let serviceObj = JSON.parse(readData);
+        let serviceStr = JSON.stringify(serviceObj);
+        res.write("<script>processResult('" + serviceStr + "');</script>");
+
+        return res.end();
     });
 }).listen(8080);
