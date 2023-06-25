@@ -1,16 +1,16 @@
 var mysql = require('mysql');
 const sqlInsert = [
-    "INSERT INTO customer (cus_id, cus_name, cus_email, cus_password) VALUES(1, 'Egbert', 'Egbert@gmail.com', 'Egbert101');",
-    "INSERT INTO customer (cus_id, cus_name, cus_email, cus_password) VALUES(2, 'Roxy', 'Roxy@yahoo.com', 'Kanayamylove');",
-    "INSERT INTO customer (cus_id, cus_name, cus_email, cus_password) VALUES(3, 'Strider', 'dave@gmail.com', 'BroPuppet');",
-    "INSERT INTO customer (cus_id, cus_name, cus_email, cus_password) VALUES(4, 'Jade', 'meow@gmail.com', 'silly');",
-    "INSERT INTO customer (cus_id, cus_name, cus_email, cus_password) VALUES(5, 'John', 'Avery@gmail.com', 'Wawa');"
+    "INSERT INTO customer (cus_name, cus_email, cus_password) VALUES('Egbert', 'Egbert@gmail.com', 'Egbert101');",
+    "INSERT INTO customer (cus_name, cus_email, cus_password) VALUES('Roxy', 'Roxy@yahoo.com', 'Kanayamylove');",
+    "INSERT INTO customer (cus_name, cus_email, cus_password) VALUES('Strider', 'dave@gmail.com', 'BroPuppet');",
+    "INSERT INTO customer (cus_name, cus_email, cus_password) VALUES('Jade', 'meow@gmail.com', 'silly');",
+    "INSERT INTO customer (cus_name, cus_email, cus_password) VALUES('John', 'Avery@gmail.com', 'Wawa');"
 ];
 
 var con = mysql.createConnection({
-    host: "localhost",
+    host: "127.0.0.1",
     user: "root",
-    password: "Amine0506!!",
+    password: "root",
     database: "csit128_db"
 });
 

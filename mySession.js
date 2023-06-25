@@ -1,6 +1,3 @@
-// The purpose of this file is to manage the project sessions.
-// @author Dr. Haitham Yaish
-// @date 11 June 2023
 const session = require('express-session');
 var mySession;
 

@@ -1,9 +1,9 @@
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-    host: "localhost",
+    host: "127.0.0.1",
     user: "root",
-    password: "Amine0506!!",   // provide your own password.
+    password: "root",   // provide your own password.
     database: "csit128_db"
 });
 
@@ -11,7 +11,7 @@ con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
     // Create employee table.
-    var sql_table = "CREATE TABLE customer (cus_id INT PRIMARY KEY, " +
+    var sql_table = "CREATE TABLE customer (cus_id INT AUTO_INCREMENT PRIMARY KEY, " +
     "cus_name VARCHAR(50)," +
     "cus_email  VARCHAR(255)," +
     "cus_password VARCHAR(50))";
