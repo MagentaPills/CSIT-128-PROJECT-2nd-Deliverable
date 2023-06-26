@@ -28,7 +28,22 @@ http.createServer(function (req, res) {
             myModule.authenticateUser(res,body,mySess, myModule.preAuthentication);  //.then(result => console.log(result));
         });
 
-    } else if (req.url == "/profile") {
+    }
+    else if (req.url == "/signup") {
+        myModule.navigateToSignUp(res);
+        if (req.method == "POST") {
+            var body = '';
+            req.on('data', chunk => {
+                body += chunk.toString();
+            });
+            req.on('end', () => {
+                var formData = querystring.parse(body);
+                myModule.handleSignup(res, formData);
+            });
+        }
+
+    }
+    else if (req.url == "/profile") {
         s = mySess.getMySession();
         if (s !== undefined) {
             if (s.email != "" && s.email !== undefined) {
@@ -39,20 +54,6 @@ http.createServer(function (req, res) {
             myModule.login(res);
         }
     } 
-    else if (req.url == "/signup") {
-        myModule.signup(res);
-        if (req.method == "POST") {
-            var body = '';
-            req.on('data', chunk => {
-                body += chunk.toString();
-            });
-            req.on('end', () => {
-                var formData = querystring.parse(body);
-                myModule.handleSignup(res, formData)
-            });
-        }
-
-     }
     else if (req.url == "/logout") {
         s = mySess.getMySession();
         if (s !== undefined) {

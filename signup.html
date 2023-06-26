@@ -28,44 +28,48 @@
       </div>
       <div class="logreg-box">
         <div class="form-box register">
-          <form action="signup">
-            <h2>Sign Up</h2>
-            <p id="demo_error_message" class="errorMessage"></p>
-            <div class="input-box">
-              <span class="icon"><i class='bx bx-user'></i></span>
-              <input type="text" name="name" id="name" required>
-              <label>Name</label>
-            </div>
+            <form action="signup" method="post">
+                <h2>Sign Up</h2>
+                <p id="demo_error_message" class="errorMessage"></p>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bx-user'></i></span>
+                    <input type="text" name="name" id="name" required>
+                    <label>Name</label>
+                </div>
 
-            <div class="input-box">
-              <span class="icon"><i class='bx bxs-envelope'></i></span>
-              <input type="email" name="email" id="email" required>
-              <label>Email</label>
-            </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                    <input type="email" name="email" id="email" required>
+                    <label>Email</label>
+                </div>
 
-            <div class="input-box">
-              <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-              <input type="password" name="password" id="password" required>
-              <label>Password</label>
-            </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="password" name="password" id="password" required>
+                    <label>Password</label>
+                </div>
 
-            <div class="remember-forgot">
-              <label><input type="checkbox" required>I agree to <a href="tos.pdf" target="_blank">the terms & conditions</a></label>
-            </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" required>I agree to <a href="http://localhost:3333/?pdf=tos.pdf" target="_blank">the terms & conditions</a></label>
+                </div>
 
-            <button type="submit" class="btn">Sign Up</button>
+                <button type="submit" class="btn" onclick="myAlert()">Sign Up</button>
 
-            <div class="login-register">
-              <p>Already Have an Account? <a href="login.html" class="login-link">Sign in</a> </p>
-            </div>
-
-          </form>
+                <div class="login-register">
+                    <p>Already Have an Account? <a href="login" class="login-link">Sign in</a> </p>
+                </div>
+            </form>
+          
 
       </div>
 </div>
 
 </div>
 
-<script src="script.js"></script>
+    <script>
+        function myAlert() {
+            alert("You Have Sucessfully Registered. Please Go to the Login Page!");
+        }
+    </script>
   </body>
 </html>

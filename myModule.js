@@ -318,14 +318,20 @@ exports.addMessage = function (res, mySess, messageName, messagePhone, messageEm
         myCallback(res, mySess, result); // result - employee titles object
     });
 };
-exports.signup = function (res) {
-    fs.readFile("signup.html", function(err, data){
+exports.navigateToSignUp = function (res, mySess, result) {
+    fs.readFile("signup.html", function (err, data) {
         if (err) {
-            res.writeHead(404, { 'Content-Type': 'text/html' });
-            return res.end("404 Not Found");
+            throw err;
         }
+        var txt = data.toString();
         res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
+        res.write(txt);
+        res.write("<script>");
+        if (result !== undefined) {
+            res.write("document.getElementById(\"demo_error_message\").innerHTML = 'User has been Successfully Registered!';");
+        }
+        res.write("</script>");
+
         return res.end();
     });
 };
@@ -337,9 +343,9 @@ exports.handleSignup = function (res, formData) {
     var password = formData.password;
 
     var con = this.connectToDB();
-    con.connect(function (err){
+    con.connect(function (err) {
         if (err) throw err;
-        var sql  = "INSERT INTO customer (cus_name, cus_email, cus_password) VALUES('"+ name +"', '"+ email +"', '"+ password +"');";
+        var sql = "INSERT INTO customer (cus_name, cus_email, cus_password) VALUES('" + name + "', '" + email + "', '" + password + "');";
         con.query(sql, function (err, result) {
             if (err) throw err;
             console.log(result);
