@@ -5,6 +5,7 @@ var url = require('url');
 var imageDir = './images/';
 var cssDir = './css/';
 var javaScriptDir = './javascript/';
+var PDFDir = './pdf/';
 
 //create http server listening on port 3333
 http.createServer(function (req, res) {
@@ -47,7 +48,20 @@ http.createServer(function (req, res) {
                 res.end(content);
             }
         });
-    } else if (query.js != undefined) {
+    }
+    else if (query.pdf !== undefined) {
+        console.log("PDF ------------");
+        file = query.pdf;
+        fs.readFile(PDFDir + file, function (err, content) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.writeHead(200, { 'Content-type': 'application/pdf' });
+                res.end(content);
+            }
+        });
+    }
+    else if (query.js != undefined) {
         console.log("JavaScript ------------");
         file = query.js;
         fs.readFile(javaScriptDir + file, function (err, content) {

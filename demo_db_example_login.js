@@ -26,8 +26,10 @@ http.createServer(function (req, res) {
             // Authonticate user credentials.
             myModule.authenticateUser(res,body,mySess, myModule.preAuthentication);  //.then(result => console.log(result));
         });
-    } else if (req.url == "/signup") {
-        myModule.signup(res);
+
+    }
+    else if (req.url == "/signup") {
+        myModule.navigateToSignUp(res);
         if (req.method == "POST") {
             var body = '';
             req.on('data', chunk => {
@@ -35,10 +37,12 @@ http.createServer(function (req, res) {
             });
             req.on('end', () => {
                 var formData = querystring.parse(body);
-                myModule.handleSignup(res, formData)
+                myModule.handleSignup(res, formData);
             });
         }
 
+    }
+    else if (req.url == "/profile") {
      } else if (req.url == "/profile") {
         s = mySess.getMySession();
         if (s !== undefined) {
@@ -50,20 +54,6 @@ http.createServer(function (req, res) {
             myModule.login(res);
         }
     } 
-    else if (req.url == "/signup") {
-        myModule.signup(res);
-        if (req.method == "POST") {
-            var body = '';
-            req.on('data', chunk => {
-                body += chunk.toString();
-            });
-            req.on('end', () => {
-                var formData = querystring.parse(body);
-                myModule.handleSignup(res, formData)
-            });
-        }
-
-     }
     else if (req.url == "/logout") {
         s = mySess.getMySession();
         if (s !== undefined) {
